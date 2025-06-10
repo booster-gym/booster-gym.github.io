@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Booster Gym: An End-to-End Reinforcement Learning Framework for Humanoid Robot Locomotion</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Booster Gym: An End-to-End Reinforcement Learning Framework for
+              Humanoid Robot Locomotion</h1>
+            <div class="is-size-4 publication-authors">
+              <span class="author-block">
+                <a href="https://yushi.ws/">Yushi Wang</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <span class="author-block">
+                <a href="mailto:cph24@mails.tsinghua.edu.cn">Penghui Chen</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <span class="author-block">
+                <a>Xinyu Han</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>
+              <span class="author-block">
+                <a>Feng Wu</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=psoMDgwAAAAJ">Mingguo Zhao</a><sup>1</sup>
+              </span>
+            </div>
+            <div class="column has-text-centered">
+              <p style="display: inline-block; vertical-align: top;"><sup>1</sup></p>
+              <a href="https://www.tsinghua.edu.cn/">
+                <img src="./static/images/tsinghua.svg" class="interpolation-image" width="30%" />
+              </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <p style="display: inline-block; vertical-align: top;"><sup>2</sup></p>
+              <a href="https://www.boosterobotics.com/">
+                <img src="./static/images/booster.svg" class="interpolation-image" width="18%" />
+              </a>
+            </div>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="static/pdfs/paper.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span><span class="link-block">
+                  <a href="https://arxiv.org/abs/2506.15132" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/BoosterRobotics/booster_gym"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="content has-text-centered">
+              <img src="./static/images/sim.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Recent advancements in reinforcement learning (RL) have led to significant progress in humanoid robot
+                locomotion,
+                simplifying the design and training of motion policies in simulation. However, the numerous
+                implementation details make
+                transferring these policies to real-world robots a challenging task. To address this, we have developed
+                a comprehensive
+                code framework that covers the entire process from training to deployment, incorporating common RL
+                training methods,
+                domain randomization, reward function design, and solutions for handling parallel structures. This
+                library is made
+                available as a community resource, with detailed descriptions of its design and experimental results. We
+                validate the
+                framework on the Booster T1 robot, demonstrating that the trained policies seamlessly transfer to the
+                physical platform,
+                enabling capabilities such as omnidirectional walking, disturbance resistance, and terrain adaptability.
+                We hope this
+                work provides a convenient tool for the robotics community, accelerating the development of humanoid
+                robots. The code
+                can be found in <a
+                  href="https://github.com/BoosterRobotics/booster_gym">https://github.com/BoosterRobotics/booster_gym</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--/ Abstract. -->
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{wang2025booster,
+  title   = {Booster Gym: An End-to-End Reinforcement Learning Framework for Humanoid Robot Locomotion},
+  author  = {Wang, Yushi and Chen, Penghui and Han, Xinyu and Wu, Feng and Zhao, Mingguo},
+  journal = {arXiv preprint arXiv:2506.15132},
+  year    = {2025},
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              Page template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>.
+            </p>
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
